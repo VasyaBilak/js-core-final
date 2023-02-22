@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <div id="container">
+        <div class="timer">01:00</div>
+
+        <div class="buttons">
+            <button id="btnStartGame">Start game!</button>
+            <button id="checkResults" disabled="disabled">Check results</button>
+            <button class="btnNewGame">New game</button>
+        </div>
+
+        <div class="puzzles">
+            <div id="pieceContainer"></div>
+            <div id="puzzleContainer"></div>
+        </div>
+    </div>
+
+    <!-- modal when time end up -->
+    <div class="modal-lost__wrapper dNone">
+        <div class="modal-lost">
+            <hr>
+            <p>It's a pity but you lost</p>
+            <hr>
+            <button class="btn-win-lost">Close</button>
+        </div>
+    </div>
+
+    <!-- modal for check button -->
+    <div class="modal-check__wrapper dNone">
+        <div class="modal-check">
+            <hr>
+            <div class="modal-text">
+                <p>You still have time, you sure?</p>
+                <span id="time">01:00</span>
+            </div>
+            <hr>
+            <div class="buttons">
+                <button class="btn-close-check">Close</button>
+                <button class="btn-check">Check</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- you win -->
+    <div class="modal-win__wrapper dNone">
+        <div class="modal-win">
+            <hr>
+            <p>Woohoo, well done, you did it!</p>
+            <hr>
+            <button class="btn-close-lost">Close</button>
+        </div>
+    </div>
+
+    <script src="./scripts/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
